@@ -7,7 +7,7 @@ import (
 type TestMode int
 
 const (
-	S15 = iota + 1
+	S15 = iota
 	S30
 	S45
 	S60

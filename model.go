@@ -71,8 +71,13 @@ func (m model) UpdateTyping(msg tea.Msg) (tea.Model, tea.Cmd) {
 		if m.startTime.IsZero() {
 			m.startTime = time.Now()
 		}
+
 		// Update time left
 		m.timeLeft = m.choices[m.cursor].Seconds() - time.Since(m.startTime)
+		if m.choices[m.cursor] == zen {
+			m.timeLeft = time.Hour
+		}
+
 		if m.timeLeft <= time.Microsecond {
 			m.view = Score
 			return m, nil
