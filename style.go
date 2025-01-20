@@ -2,7 +2,7 @@ package main
 
 import "github.com/charmbracelet/lipgloss"
 
-var cursorStyle = lipgloss.NewStyle().Background(lipgloss.Color("#daba38")).Foreground(lipgloss.Color("#ff")).Underline(true).Bold(true)
+var cursorStyle = lipgloss.NewStyle().Background(lipgloss.Color("#daba38")).Foreground(lipgloss.Color("#000000")).Underline(true).Bold(true)
 
 func formatCursor(s string) string {
 	return cursorStyle.Render(s)
